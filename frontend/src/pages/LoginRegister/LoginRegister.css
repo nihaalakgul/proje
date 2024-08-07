@@ -1,0 +1,61 @@
+.loginRegister-container {
+  background-image: url("../../Assets/background.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+.wrapper {
+  border: 2px solid rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(30px);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  overflow: hidden;
+  transition: height 0.2s ease;
+}
+.wrapper.active {
+  height: 520px;
+}
+.wrapper .form-box.login {
+  transition: translate 0.18s ease;
+  translate: 0;
+}
+.wrapper.active .form-box.login {
+  transition: none;
+  translate: -400px;
+}
+.wrapper .form-box.register {
+  position: absolute;
+  transition: none;
+  translate: 400px;
+}
+.wrapper.active .form-box.register {
+  transition: translate 0.18s ease;
+  translate: 0;
+}
+
+/* .icon {
+  position: absolute;
+  right: 20px;
+  top: 50%;
+  translate: 0 -50%;
+} */
+
+@media screen and (max-device-width: 768px) {
+  .wrapper.active {
+    width: 520px;
+    height: 600px;
+  }
+  .wrapper.active .form-box.login {
+    translate: -500px;
+  }
+  .wrapper .form-box.register {
+    translate: 500px;
+  }
+}
+
+@media screen and (max-device-width: 480px) {
+  .wrapper,
+  .wrapper.active {
+    width: 100vw;
+    height: 100vh;
+  }
+}

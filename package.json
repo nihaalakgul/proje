@@ -1,0 +1,18 @@
+{
+  "dependencies": {
+    "express": "4.19.2",
+    "nodemon": "3.1.4",
+    "nomu": "^0.0.3"
+  },
+  "name": "nomu",
+  "version": "1.0.0",
+  "main": "UserLoginController.cs",
+  "scripts": {
+    "server": "nodemon backend/server",
+    "client": "npm start --prefix frontend",
+    "dev" : " npm run server & npm run client"
+  },
+  "author": "",
+  "license": "ISC",
+  "description": ""
+}
